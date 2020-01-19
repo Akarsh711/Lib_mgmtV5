@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>G.B.N GOVT. Polytechnic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        
+        
+        <ul id="nav_bar">
+                    
+                                     
+            <a href="http://gpnilokheri.ac.in/"><img src="{{url_for('static',filename='images/logo.png')}}" length="5%" width="4%" id="nav_img" id=""></a>
+            <a href="http://gpnilokheri.ac.in/"><span id="brand">G.B.N GOVT. POLYTECHNIC</span></a>
+            <li id="nav_items"><a href="/admin" id="admin_button">admin</a></li>
+            <li id="nav_items"><a href="/about" id="nav_item">About</a></li>
+            <li id="nav_items"><a href="/" id="nav_item">Home</a></li>
+        </ul>
+
+    
+           
+
+    <div id="main_img"></div>
+   
+    <div>   
+        <iframe src="/iframe" height="700px" width="75%">
+        </iframe>
+    </div>
+
+    <div id="sidebar">
+        <h2>Welcome Admin!</h2>
+        <h6>Quick search :</h6>
+        <form method="POST" action="/detail@admin">
+        <input name="rollno" placeholder="enter student roll number" required ></input>
+        <button class="myButton">Search</button>
+        </form>
+        <br>
+        <div class="sidenav">
+                <a href="/new_entry" id="a">New entry</a>
+                <a href="/test6" id="a">Update/delete</a>
+                <a href="/admin-refresh" id="a">Refresh database</a>
+                <a href="/add_a_new_book_to_database" id="a">Add a New Book in Library</a>
+                <br>
+                <br>
+                <br>
+                <br><br><br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+
+
+                <br>
+                <br>
+                
+                <a href="logout" id="logout">Logout>></a>
+                <br>
+                <br>
+                <br>
+              
+
+                
+
+              </div>
+                      
+            
+</body>
+
+<style>
+               
+@font-face {
+  font-family: Raleway-Black;
+  src: url("{{url_for('static',filename='fonts/raleway/Raleway-Black.ttf')}}"); 
+}
+
+@font-face {
+  font-family: Raleway-SemiBold;
+  src: url("{{url_for('static',filename='fonts/raleway/Raleway-SemiBold.ttf')}}"); 
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url("{{url_for('static',filename='fonts/raleway/Raleway-Bold.ttf')}}"); 
+}
+
+.myButton {
+    background-color: #397dfb; 
+    border: 1px;
+    color: white;
+    margin-top:1px;
+    padding: 4px 17px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    }
+    
+    .myButton:hover {
+        background-color:#1b6cf7;
+        border-color:#397dfb;
+        color:#ffff;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    
+    #nav_bar {
+        list-style-type: none;
+        margin: 0;
+        padding:0;
+        overflow: hidden;
+        
+        background-color: #ffffff;
+        }
+
+    #nav_items {
+        float: right;
+        }
+    #nav_img{
+        position:absolute;
+        height:55px;
+        width:53px
+    }
+
+    #nav_items #nav_item {
+        display: block;
+        color: black;
+        text-align: center;
+        font-family: verdana;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+    #nav_items #nav_item:hover {
+        background-color:#ffffff;
+        color:#397efb;
+        }
+
+    #nav_items #admin_button {
+        display: block;
+        background-color:black;
+        color: #ffffff;
+        text-align: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+    #nav_items #admin_button:hover {
+        background-color:black;
+        color:#1b6cf7;
+        }
+    
+    
+      
+    p{
+        float:left;
+        
+    }
+    #brand{
+        margin-left: 69px;
+        font-size:22px;
+        font-family: Raleway-Black;
+        font-weight:bold;
+        color: #333333;
+    }
+    #brand:hover{
+        color:#397dfb;
+    }
+
+    
+        #main_img{
+            background-image: url("{{url_for('static', filename='images/lib.jpg')}}");
+            background-repeat: no-repeat;
+            height:450px;
+            
+            background-size: cover;
+        }
+        
+        
+        
+        
+        iframe{
+            float:right;
+            height:789px;
+            border-color:#1b6cf7;
+        }
+    
+    
+        #sidebar #search{
+            background-color:#397dfb;
+            border:2% solid #397dfb;
+            display:inline-block;
+            
+            color:#ffffff;
+            font-family:Verdana;
+            font-size:15px;
+            margin-bottom: 12px;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 1px #397dfb;
+        }
+        #sidebar #search:hover{
+            background-color:#1b6cf7;
+            color:#ffff
+        }
+        #sidebar input{
+            margin-left:2px;
+        }
+        .sidenav {
+      height: 100%;
+      width: 25%;
+      position: ;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .sidenav #a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #ffffff;
+      display: block;
+    }
+    
+    .sidenav #a:hover {
+      color: #1b6cf7;
+    }
+    
+    #logout{
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      display: block;
+      color:aliceblue;
+    }
+    #logout:hover{
+        color:red;
+    }
+    form {
+  &:valid {
+    background: url(images/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+
+    // continue to hide the label
+    & + label {
+      opacity: 0;
+    }
+ 
+	}
+        </style>
+</html>

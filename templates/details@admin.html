@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body>
+        <a href="/admin" id="search">home</a>
+
+    <h2>
+    <table border="1px">
+            
+        <tr>
+        <th>Name</th>
+        <th>Rollno</th>
+        <th>Books</th>
+        <th>Issue Date</th>
+    </tr>
+        
+    <tr>
+        <td>{{name}}</td>
+        <td>{{rollno}}</td>
+        {%set n = namespace(a=1)%}
+        <td>{% for i in data2 %}{{i[2]}}{%if n.a<=y%},{%set n.a=n.a+1%}{%endif%}{%endfor%}</td>
+        <td>{{date}}</td>
+    </tr>    
+    </table>
+    </h2>
+</body>
+<style>
+#search{
+        background-color:#397dfb;
+        border:2% solid #397dfb;
+        display:inline-block;
+        
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:15px;
+        margin-bottom: 12px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 1px #397dfb;
+    }
+#search:hover{
+        background-color:#1b6cf7;
+        color:#ffff
+    }
+</style>
+</html>

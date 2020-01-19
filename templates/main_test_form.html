@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V11</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('{{url_for('static', filename='images/bg-01.jpg')}}');">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Get in Touch
+				</span>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Name *</span>
+					<input class="input100" type="text" name="name" placeholder="Enter your name">
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Roll Number *</span>
+					<input class="input100" type="text" name="email" placeholder="Student Roll Number">
+				</div>
+
+				<div class="wrap-input100 >
+					<span class="label-input100">Book Name</span>
+					<textarea class="input100" name="message" placeholder="Enter name of book"></textarea>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Book id cannot be empty">
+					<span class="label-input100">Book ID</span>
+					<textarea class="input100" name="message" placeholder="Enter id of Books"></textarea>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Authors</span>
+					<textarea class="input100" name="message" placeholder="Authors"></textarea>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 ">
+					<span class="label-input100">More Info</span>
+					<input class="input100" type="text" name="email" placeholder="More Info here..."  required>
+				</div>
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<span class="contact100-more">
+				Call us on +001 345 6178
+		</span>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+
+</body>
+</html>

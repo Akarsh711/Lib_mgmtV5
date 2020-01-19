@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Update Details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('{{url_for('static', filename='images/bg-01.jpg')}}');">
+		<div class="wrap-contact100">
+            <a href="/admin" id="btn">home</a>
+			<form class="contact100-form validate-form" action="/updaterv23/{{data.rollno}}" method="POST">
+				<span class="contact100-form-title">
+					Update Details
+				</span>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Name *</span>
+					<input class="input100" type="text" name="name" value={{data.name}} required>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Roll Number *</span>
+					<input class="input100" type="text" name="rollno" value={{data.rollno}} required>
+                </div>
+                
+                {%set n = namespace(a=1)%}
+				<div class="wrap-input100" >
+                    <span class="label-input100">Book Name *</span>
+                    <br>
+					<span class="label-input100" id="caution_message">
+							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="9px" height="9px" viewBox="0 0 361.117 361.117">
+							<g>
+								<g>
+									<path d="M359.568,327.246L191.511,21.818c-2.197-3.993-6.395-6.474-10.952-6.474c-4.558,0-8.754,2.481-10.952,6.474L1.549,327.246
+										c-2.131,3.872-2.058,8.582,0.191,12.388c2.249,3.805,6.34,6.139,10.76,6.139h336.117c4.421,0,8.512-2.334,10.761-6.139
+										C361.627,335.828,361.699,331.118,359.568,327.246z M33.646,320.772L180.559,53.773l146.913,266.999H33.646z"/>
+									<path d="M164.894,143.085v90.351c0,8.65,7.014,15.665,15.665,15.665c8.65,0,15.665-7.015,15.665-15.665v-90.351
+										c0-8.651-7.015-15.665-15.665-15.665C171.908,127.42,164.894,134.435,164.894,143.085z"/>
+									<path d="M180.559,265.364c-9.097,0-16.5,7.399-16.5,16.5c0,9.098,7.403,16.5,16.5,16.5c9.097,0,16.5-7.402,16.5-16.5
+										C197.059,272.764,189.655,265.364,180.559,265.364z"/>
+								</g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							<g>
+							</g>
+							</svg>
+							Please always leave empty this field if your are updating books using there id's!</span>
+					
+					<input class="input100" name="book" required value="{% for i in data2 %}{{i[2]}}{%if n.a<=y%},{%set n.a=n.a+1%}{%endif%}{%endfor%}"></input>
+                </div>
+                
+                {%set n = namespace(a=1)%}
+				<div class="wrap-input100 validate-input" data-validate = "Book id cannot be empty">
+					<span class="label-input100">Book ID </span>
+					<input class="input100" name="book_id" value="{% for i in data2 %}{{i[3]}}{%if n.a<=y%},{%set n.a=n.a+1%}{%endif%}{%endfor%}" ></input>
+				</div>
+				
+				<div class="wrap-input100 " >
+					<span class="label-input100">Authors</span>
+					<textarea class="input100" name="author" {{data.author}}></textarea>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 ">
+					<span class="label-input100">More Info</span>
+					<input class="input100" type="text" name="more_info" value={{data.more}}>
+				</div>
+				<div class="container-contact100-form-btn">
+					
+						<button class="myButton">
+							Update
+                        </button>
+
+                        
+                </div>
+            </form>
+
+            <form action="/delete/{{data.rollno}}" method="POST">
+                <div class="container-contact100-form-btn">
+                            <button class="myButton">
+                                Delete
+                            </button> 
+						</div>
+                        
+			</form>
+        </div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+
+</body>
+<style>
+#btn{
+        background-color:#397dfb;
+        border:2% solid #397dfb;
+        display:inline-block;
+        
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:15px;
+        margin-bottom: 12px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 1px #397dfb;
+    }
+#btn:hover{
+        background-color:#1b6cf7;
+        color:#ffff
+	}
+	.myButton {
+    background-color: #397dfb; /* Green */
+    border: 1px;
+    color: white;
+    margin-top:1px;
+	padding: 21px 34px;
+	width:22%;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    }
+    
+    .myButton:hover {
+        background-color:#1b6cf7;
+        border-color:#397dfb;
+        color:#ffff;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+	form {
+  &:valid {
+    background: url(images/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+
+    // continue to hide the label
+    & + label {
+      opacity: 0;
+    }
+ 
+	}
+</style>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Add new Book</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('{{url_for('static', filename='images/bg-01.jpg')}}');">
+		<div class="wrap-contact100">
+                <a href="/admin" id="search">home</a>
+
+			<form class="contact100-form validate-form" action="/add_a_new_book_to_database" method="POST">
+				<span class="contact100-form-title">
+                    Add a New Book
+                </span>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Book Unique Id *</span>
+					<input class="input100" type="text" name="book_id" placeholder="" required>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Book Name *</span>
+					<input class="input100" type="text" name="book_name" placeholder="" required>
+				</div>
+
+	
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Current Total no. of Books *</span>
+					<input class="input100" type="text" name="total_no_of_books" placeholder="" required>
+				</div>	
+
+                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Number of Books remaining in library *</span>
+					<input class="input100" type="text" name="remaining_no_of_books" placeholder="" required>
+                </div>
+                
+                <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Roll Number is requied">
+					<span class="label-input100">Trade Code *</span>
+					<input class="input100" type="text" name="trade_code" placeholder="" required>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 ">
+					<span class="label-input100">Trade *</span>
+					<input class="input100" type="text" name="trade" placeholder="">
+				</div>
+				<div class="container-contact100-form-btn">
+						<button class="myButton">
+							Submit
+						</button>
+				</div>
+            </form>
+		</div>
+
+		
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+
+</body>
+
+<style>
+#search{
+        background-color:#397dfb;
+        border:2% solid #397dfb;
+        display:inline-block;
+        
+        color:#ffffff;
+        font-family:Verdana;
+        font-size:15px;
+        margin-bottom: 12px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 1px #397dfb;
+    }
+#search:hover{
+        background-color:#1b6cf7;
+        color:#ffff
+	}
+					
+	
+	.myButton {
+    background-color: #397dfb; /* Green */
+    border: 1px;
+    color: white;
+    margin-top:1px;
+	padding: 21px 34px;
+	width:22%;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    }
+    
+    .myButton:hover {
+        background-color:#1b6cf7;
+        border-color:#397dfb;
+        color:#ffff;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }	
+	svg{
+		
+	}
+	#caution_message{
+		color:#adadaf;
+		font-size:13px;
+	}
+</style>
+</html>

@@ -1,0 +1,19 @@
+{
+    "params":
+    {
+        "uri_for_sqlalchemy":"mysql://root:@localhost/library_mgmt",
+        "uri_for_sqlalchemy2":"mysql://root:@localhost/lib_mgmt_test",
+        "id":"123",
+        "password":"aka"
+
+    },
+    
+    "books_ids":{
+        "0102":"English1,English 1,English-1,english,english1,english_1",
+        "0101":"math,math1,math_1,math-1,Math,Math-1",
+        "0103":"chemistry,chemistry1,chemistry_1,chemistry 1,Chemistry-1,Chem-1",
+        "999":"test_Book",
+        "888":"test_book2"
+
+        }
+}

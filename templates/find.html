@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Student Search</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+	</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('{{url_for('static', filename='images/bg-01.jpg')}}');">
+		<div class="wrap-contact100">
+				<a href="/admin" id="btn">home</a>
+
+			<form class="contact100-form validate-form" method="POST" action="/data_fetch">
+				<span class="contact100-form-title">
+					Search Student by Roll number
+				</span>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="type roll number first">
+					<span class="label-input100">Roll Number</span>
+					<input class="input100" type="text" name="rollno" placeholder="Student roll number " required>
+				</div>
+
+				<div class="container-contact100-form-btn">
+				
+						<button class="myButton">
+							Submit
+						</button>
+				</div>
+			</form>
+		</div>
+
+
+
+</body>
+<style>
+
+	#btn{
+		background-color:#397dfb;
+		border:2% solid #397dfb;
+		display:inline-block;
+		
+		color:#ffffff;
+		font-family:Verdana;
+		font-size:15px;
+		margin-bottom: 12px;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:0px 1px 1px #397dfb;
+	}
+#btn:hover{
+        background-color:#1b6cf7;
+        color:#ffff
+	}
+	.myButton {
+    background-color: #397dfb; /* Green */
+    border: 1px;
+    color: white;
+    margin-top:1px;
+	padding: 21px 34px;
+	width:22%;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    }
+    
+
+	.myButton {
+	background-color: #397dfb; /* Green */
+	border: 1px;
+	color: white;
+	margin-top:1px;
+	padding: 21px 34px;
+	width:22%;
+	text-align: center;
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: inline-block;
+	font-size: 16px;
+	}
+	
+	.myButton:hover {
+		background-color:#1b6cf7;
+		border-color:#397dfb;
+		color:#ffff;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+	form {
+  		&:valid {
+    background: url(images/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+
+    // continue to hide the label
+    & + label {
+      opacity: 0;
+    		}
+ 
+			}
+	}
+</style>
+</html>
+-

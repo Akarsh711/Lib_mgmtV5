@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Skillhunt - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+
+    
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/icomoon.css')}}">
+    
+
+
+
+   
+  </head>
+  <body>
+    
+    <ul id="navbar">                           
+        <a href="http://gpnilokheri.ac.in/"><img src="{{url_for('static',filename='images/logo.png')}}" length="5%" width="4%" id="nav_img" id=""></a>
+        <a href="http://gpnilokheri.ac.in/"><span id="brand">G.B.N GOVT. POLYTECHNIC</span></a>
+        <li id="nav_items"><a href="/admin" id="admin_button">admin</a></li>
+        <li id="nav_items"><a href="/about" id="nav_item">About</a></li>
+        <li id="nav_items"><a href="/" id="nav_item">Home</a></li>
+    </ul>
+    <!-- END nav -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image:url('{{url_for('static', filename='images/lib.jpg')}}')" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	
+            <h1 class="mb-3 bread">404</h1>
+            <span class="mb-3 bread">Roll number you are looking for not  found!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/aos.js')}}"></script>
+  <script src="{{url_for('static', filename='js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/scrollax.min.js')}}"></script>
+  <script src="{{url_for('static', filename='https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
+  <script src="{{url_for('static', filename='js/google-map.js')}}"></script>
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    
+  </body>
+  <style>
+    @font-face {
+    font-family: Raleway-Black;
+    src: url("{{url_for('static',filename='fonts/raleway/Raleway-Black.ttf')}}"); 
+    }
+
+    @font-face {
+    font-family: Raleway-SemiBold;
+    src: url("{{url_for('static',filename='fonts/raleway/Raleway-SemiBold.ttf')}}"); 
+    }
+
+    @font-face {
+    font-family: Raleway-Bold;
+    src: url("{{url_for('static',filename='fonts/raleway/Raleway-Bold.ttf')}}"); 
+    }
+      #navbar {
+        list-style-type: none;
+        
+        margin: 0;
+        padding:0;
+        overflow: hidden;
+        
+        background-color: #ffffff;
+        }
+
+    #nav_items {
+        float: right;
+        }
+    #nav_img{
+        position:absolute;
+        height:55px;
+        width:53px
+    }
+
+    #nav_items #nav_item {
+        display: block;
+        color: black;
+        text-align: center;
+        font-family: verdana;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+    #nav_items #nav_item:hover {
+        background-color:#ffffff;
+        color:#397efb;
+        }
+
+    #nav_items #admin_button {
+        display: block;
+        background-color:black;
+        color: #ffffff;
+        text-align: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+    #nav_items #admin_button:hover {
+        background-color:black;
+        color:#1b6cf7;
+        }
+    
+    
+      
+    p{
+        float:left;
+        
+    }
+    #brand{
+        margin-left: 69px;
+        font-size:22px;
+        font-family: Raleway-Black;
+        font-weight:bold;
+        color: #333333;
+    }
+    #brand:hover{
+        color:#397dfb;
+    }
+
+  </style>
+</html>
