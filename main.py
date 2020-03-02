@@ -5,7 +5,7 @@ import json
 import numpy as np
 import pymysql
 
-pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb()#or  you can directly install MySQLdb using pip install MySQL-python
 j=open("config.json","r")
 p=json.load(j)
 
