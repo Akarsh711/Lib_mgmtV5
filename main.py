@@ -15,7 +15,7 @@ app.secret_key='super-secret-hai'
 if test==1:
     app.config['SQLALCHEMY_DATABASE_URI']=p["params"]["uri_for_sqlalchemy"]
 if test==0:
-        app.config['SQLALCHEMY_DATABASE_URI']=p["params"]["uri_for_sqlalchemy2"]
+    app.config['SQLALCHEMY_DATABASE_URI']=p["params"]["uri_for_sqlalchemy2"]
 
 db=SQLAlchemy(app)
 
