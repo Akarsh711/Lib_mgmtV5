@@ -19,7 +19,7 @@ if test==0:
 
 db=SQLAlchemy(app)
 
-class Books(db.Model):
+class Books(db.Model):#the class name shold always capital weather in db it is not!!!
     sno=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(50),nullable=True)
     rollno=db.Column(db.String(15),nullable=True)
